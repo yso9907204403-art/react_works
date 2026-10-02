@@ -1,0 +1,10 @@
+.welcome {
+  color: #3020be;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}
