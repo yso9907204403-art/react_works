@@ -1,21 +1,30 @@
+// 외부 컴포넌트 생성
+// 조건부 렌더링
+
 const Example01 = () => {
-    const isloggedIn = true;
+    const isLoggedIn = true;  
+
     let result = "";
-    if (isloggedIn) {
-        result = <h3>로그인 상태입니다.</h3>
-    }else {
-        result = <h3>로그아웃 상태입니다.</h3>
+    if(isLoggedIn){
+        result = "로그인 상태입니다.";
+    }else{
+        result = "로그아웃 상태입니다.";
     }
 
-
-    return (
+    return(
         <div>
             <h2>조건부 렌더링</h2>
             <p>{result}</p>
-            {isloggedIn ? <h3>로그인 상태입니다.</h3> : <h3>로그아웃 상태입니다.</h3>}
-            {isloggedIn && <p>로그인 상태입니다.</p>}
+            {/* 삼항 연산자 */}
+            { isLoggedIn ? 
+                <p>로그인 상태입니다.</p> : 
+                <p>로그아웃 상태입니다.</p>}
+
+            {/* && 연산자 사용 - 조건1 && 조건2 동시에 만족 */}
+            { isLoggedIn && <p>로그인 상태입니다.</p>}
         </div>
     )
 }
 
+// 내보내기
 export default Example01;
