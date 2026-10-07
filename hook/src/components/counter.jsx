@@ -1,24 +1,27 @@
-import { useState } from 'react'
+import { useState } from "react";
 
 const Counter = () => {
-    const [count, setCount] = useState(0)
+    // 초기화 반드시 필수 : const count = 0
+    const [ count, setCount ] = useState(0);
 
+    // 숫자 1 증가 핸들러(함수)
     const increment = () => {
-        setCount(count + 1)
-    }
-    const decrement = () => {
-        setCount(count - 1)
+        setCount(count + 1);
     }
 
-    return (
+    // 숫자 1 감소 핸들러(함수)
+    const decrement = () => {
+        setCount(count - 1);
+    }
+
+    return(
         <div>
-            <h1>Counter</h1>
-            <p>Count: {count}</p>
-            <button onClick={increment}>Increment</button>
-            <button onClick={decrement}>Decrement</button>
-            <button onClick={() => setCount(0)}>Reset</button>
+            <h2>카운터 만들기</h2>
+            <h3>현재 Count: {count}</h3>
+            <button onClick={increment}>+증가</button>
+            <button onClick={decrement}>-감소</button>
+            <button onClick={() => setCount(0)}>초기화</button>
         </div>
     )
-}  
-
+}
 export default Counter;

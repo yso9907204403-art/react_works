@@ -1,15 +1,26 @@
 import './App.css'
-import Counter from './components/counter'
-import Drink from './components/drink'
+import Signin from './users/SignIn'
+import Clock from './components/Clock'
+import Counter from './components/Counter'
+import Drinks from './components/Drinks'
+import InputValue from './components/InputValue'
+import User from './components/User'
+import SignUp from './users/SignUp'
 
 function App() {
+
   return (
-    <><div className="app">
-      <h2>React Hooks</h2>
-      {/* <Drink /> */}
-      {/* <InputValue /> */}
-    </div>
-    <Drink />
+    <>
+      <div className='app'>
+        {/* <h2>리엑트 상태 관리</h2> */}
+        {/* <Counter /> */}
+        {/* <InputValue /> */}
+        {/* <Drinks /> */}
+        {/* <Clock /> */}
+        {/* <User /> */}
+        {/*<SignUp /> */}
+        <Signin/>
+      </div>
     </>
   )
 }

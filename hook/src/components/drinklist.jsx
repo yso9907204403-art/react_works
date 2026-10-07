@@ -1,9 +1,11 @@
-const  drinklist = ({ drinks }) => {
-    return (
+// Drinks의 하위 컴포넌트 정의
+const DrinkList = ({drinklist}) => {
+    console.log(drinklist);
+
+    return(
         <div>
-            <h2>음료 리스트</h2>
-             <ul>
-                {drinks.map((drink, index) => (
+            <ul>
+                {drinklist.map((drink, index) => (
                     <li key={index}>{drink}</li>
                 ))}
             </ul>
@@ -11,4 +13,4 @@ const  drinklist = ({ drinks }) => {
     )
 }
 
-export default drinklist;
+export default DrinkList;

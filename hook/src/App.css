@@ -1,8 +1,35 @@
 .app{
   margin-top: 20px;
 }
-
 ul{
   list-style: none;
-  padding: 0;
+  padding-left: 0;
 }
+.sign-up{
+  width: 500px;
+  margin: 30px auto;
+}
+.sign-up ul{
+  list-style: none;
+}
+.sign-up ul li > label:first-child{
+  margin: 16px;
+  width: 80px;
+}
+
+.sign-up ul li:last-child{
+  text-align : center;
+}
+
+.sign-up ul li input[type="text"],
+.sign-up ul li select,
+.sign-up ul li textarea{
+  padding: 5px;
+  width: 200px;
+}
+
+.sign-up ul li textarea{
+  resize: none;
+}
+
+
