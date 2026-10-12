@@ -1,0 +1,7 @@
+const users = [
+  { username: 'user1', password: 'u1111' },
+  { username: 'user2', password: 'u2222' },
+  { username: 'user3', password: 'u3333' }
+]
+
+export default users;   
