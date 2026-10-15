@@ -1,17 +1,30 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './App.css';
-import Main from './layouts/Main';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import './App.css'
+import Main from './layouts/Main'
+import Header from './layouts/Header'
+import ProductList from './products/ProductList'
+import ProductInfo from './products/ProductInfo'
+import AddProduct from './layouts/AddProduct'
 
 function App() {
+
   return (
-    <section className="app">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Main />} />
-        </Routes>
-      </BrowserRouter>
-    </section>
-  );
+    <>
+      <section className="app">
+        <BrowserRouter>
+          <Header />
+          <div className='container'>
+            <Routes>
+              <Route path='/' element={<Main />} />
+              <Route path='/products' element={<ProductList />} />
+              <Route path='/products/:id' element={<ProductInfo />} />
+              <Route path='/add-product' element={<AddProduct />} />
+            </Routes>
+          </div>
+        </BrowserRouter>
+      </section>
+    </>
+  )
 }
 
-export default App;
+export default App
